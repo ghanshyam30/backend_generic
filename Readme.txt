@@ -1,5 +1,6 @@
 Backend Automation Project
 ============================
+Disclaimer : The project is to be run on linux environment because the "\" creates an issue in windows!
 
 Goals -
 ============================
@@ -39,6 +40,7 @@ Project Goals Progress -
        - [Usage] ${Headers}  Create Dictionary  Content-Type=application/json - Same way we can create Query,Path parameters as well
 5] Example:
 Note : You can refer/execute any test from Test\PostTest.robot file to get knowledge of how this works
+
 *** Settings ***
 Library  RequestsLibrary
 Library  ..\\Code\\BaseFunctions.py
@@ -57,3 +59,4 @@ Simple Post Request
   ${Post_Response}  Post Request  DummyREST  /api/users    data=${payload}  headers=${Headers}
   Log  ${Post_Response.content}
   Validate Response From Json File  ${Post_Response.content}  Post_Create_User
+
