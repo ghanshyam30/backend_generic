@@ -1,8 +1,8 @@
 *** Settings ***
 Library  RequestsLibrary
-Library  ..\\Code\\BaseFunctions.py
+Library  ..\\code\\BaseFunctions.py
 Library    JsonValidator
-Resource  ..\\Code\\BaseRobotFunctions.robot
+Resource  ..\\code\\BaseRobotFunctions.robot
 
 *** Test Cases ***
 Simple Get Request
