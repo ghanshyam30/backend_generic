@@ -86,7 +86,7 @@ class BaseFunctions():
     def get_dictionary_from_json(self,file_name):
         verification_dictionary = {}        # Temp variable to store the dictionary form of file
         current_dir = os.getcwd()
-        with open("{0}\\data\\{1}.json".format(current_dir,file_name)) as json_file:
+        with open("{0}//data//{1}.json".format(current_dir,file_name)) as json_file:
             verification_dictionary = json.load(json_file)
         return verification_dictionary
 
