@@ -5,8 +5,9 @@ Library    BaseFunctions.py
 *** Keywords ***
 Validate Response From Json File
   [Documentation]  The file should be parsed as dictionary and then key and value pairs should be tested against the response
-  [Arguments]  ${Response_data}  ${file_name}
+  [Arguments]  ${Response_Data}  ${file_name}
   ${Verification_Dictionary}  Get Dictionary From Json  ${file_name}
+  ${Response_data}  convert to string  ${Response_Data}
   :FOR    ${key}    IN    @{Verification_Dictionary.keys()}
   \    ${value}    Set Variable    ${Verification_Dictionary['${key}']}
   \    ${value_type}    Evaluate    type($value).__name__
